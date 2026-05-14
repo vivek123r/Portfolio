@@ -75,14 +75,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Vivek R — Full-Stack Developer · AI/ML · Mobile · Systems" },
+      { name: "description", content: "Portfolio of Vivek R. Editorial-grade engineering across AI/ML, mobile, and system automation." },
+      { name: "author", content: "Vivek R" },
+      { property: "og:title", content: "Vivek R — Engineer & Maker" },
+      { property: "og:description", content: "An editorial portfolio of work in AI, mobile, and systems." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
@@ -116,7 +115,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="grain min-h-screen">
+        <SmoothScroll />
+        <Cursor />
+        <SideNav />
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }
