@@ -23,10 +23,10 @@ const skills = [
 ];
 
 const rotating = [
-  "Building AI-Powered Solutions",
-  "Shipping Mobile First",
-  "Architecting Cloud Systems",
-  "Writing Software That Lasts",
+  "Currently shipping side projects",
+  "Learning by building, daily",
+  "Open to internships & collabs",
+  "Writing code that actually runs",
 ];
 
 function Index() {
