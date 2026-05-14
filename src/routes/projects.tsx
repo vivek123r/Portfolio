@@ -6,8 +6,8 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Vivek R — Catalogue / Work" },
-      { name: "description", content: "A horizontal catalogue of projects: AI agents, mobile apps, system tools." },
+      { title: "Vivek Ravi — Catalogue / Selected Works" },
+      { name: "description", content: "Selected works: AI agents, mobile apps, system tools, web platforms." },
     ],
   }),
 });
@@ -19,75 +19,72 @@ type Project = {
   year: string;
   stack: string[];
   blurb: string;
+  href: string;
   tone: "ember" | "ink" | "amber" | "paper";
 };
 
+const GH = "https://github.com/vivek123r";
+
 const projects: Project[] = [
   {
-    num: "001",
-    title: "EXFORGE",
-    kind: "AI Extension Builder",
-    year: "2025",
+    num: "001", title: "EXFORGE", kind: "AI Extension Builder", year: "2025",
     stack: ["LangChain", "Python", "Agents"],
-    blurb: "An AI-powered extension builder. Plain English in, production-ready code out. Multi-agent orchestration with deterministic guardrails.",
-    tone: "ember",
+    blurb: "AI-powered extension builder that uses intelligent agents to write production-ready code. Plain-English prompts → complete extensions with views, configuration, tests, docs.",
+    href: `${GH}/Extension`, tone: "ember",
   },
   {
-    num: "002",
-    title: "MINT",
-    kind: "Expense Tracker",
-    year: "2024",
+    num: "002", title: "MINT", kind: "SMS Expense Tracker", year: "2024",
     stack: ["Flutter", "Firebase", "Dart"],
-    blurb: "SMS-driven expense intelligence. Parses transactional messages on-device into a clean ledger with category planning and budget pacing.",
-    tone: "amber",
+    blurb: "Privacy-focused expense tracker that parses SMS transactions on-device with 99% accuracy. Real-time monitoring, category analysis, budget planning, charts.",
+    href: `${GH}/ExpenseTracker_sms-based`, tone: "amber",
   },
   {
-    num: "003",
-    title: "SYSMON",
-    kind: "Real-time Monitor",
-    year: "2024",
+    num: "003", title: "SYSMON", kind: "System Monitor", year: "2024",
     stack: ["Python", "FastAPI", "Flutter"],
-    blurb: "A secure real-time PC monitoring and remote-control surface. CPU, RAM, GPU, network — streamed and steerable from your phone.",
-    tone: "ink",
+    blurb: "Secure real-time PC monitoring + remote control. CPU/RAM/GPU/Disk/Network/Battery streamed to mobile. LAN file sharing via QR, multi-user devices, command logging.",
+    href: `${GH}/SystemMonitor`, tone: "ink",
   },
   {
-    num: "004",
-    title: "GAMING ADVISOR",
-    kind: "System Optimizer",
-    year: "2024",
-    stack: ["Python", "Telemetry"],
-    blurb: "Reads your rig, recommends the precise settings to push every frame. A small daemon with strong opinions.",
-    tone: "paper",
+    num: "004", title: "GAMING ADVISOR", kind: "Performance Tuner", year: "2024",
+    stack: ["Python", "Telemetry", "Desktop"],
+    blurb: "Reads your rig, recommends precise settings to push every frame. Game perf analysis, personalized graphics presets, real-time CPU/GPU monitoring.",
+    href: `${GH}/gaming-advisor`, tone: "paper",
   },
   {
-    num: "005",
-    title: "E-SHOP",
-    kind: "Commerce Surface",
-    year: "2023",
-    stack: ["React", "Node", "Stripe"],
-    blurb: "An editorial commerce front-end. Catalog, cart, secure checkout, push notifications — quiet UX, loud merchandising.",
-    tone: "ember",
+    num: "005", title: "E-SHOP", kind: "Commerce Surface", year: "2024",
+    stack: ["React", "Node", "Payments"],
+    blurb: "Modern e-commerce front. Catalog, cart, secure payment integration, auth, order tracking, push notifications. Quiet UX, loud merchandising.",
+    href: `${GH}/e-shop`, tone: "ember",
   },
   {
-    num: "006",
-    title: "DEVFOLIO",
-    kind: "Portfolio Engine",
-    year: "2026",
+    num: "006", title: "CHATBOT EXT", kind: "VS Code Extension", year: "2024",
+    stack: ["JS", "VSCode API"],
+    blurb: "Visual Studio Code extension for developer productivity — code snippets, syntax highlighting, intelligent autocomplete, debugging tools.",
+    href: `${GH}/Extension`, tone: "amber",
+  },
+  {
+    num: "007", title: "SCRAPER BOT", kind: "Web Scraping Suite", year: "2024",
+    stack: ["Python", "Selenium", "Scrapy"],
+    blurb: "Advanced web scraping with BeautifulSoup, Scrapy, Selenium. Automated extraction, anti-bot bypass, cleaning + processing pipeline.",
+    href: `${GH}/chatbot_python_webScraping`, tone: "ink",
+  },
+  {
+    num: "008", title: "DEVFOLIO", kind: "Portfolio Engine", year: "2026",
     stack: ["React", "TS", "Tailwind"],
-    blurb: "The site you're reading. A small system for editorial developer storytelling — broken grids, kinetic type, and zero templates.",
-    tone: "ink",
+    blurb: "The site you're reading. A small system for editorial developer storytelling — broken grids, kinetic type, terminal mode, zero templates.",
+    href: `${GH}/DevFolio`, tone: "paper",
   },
 ];
 
 function ProjectsPage() {
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: trackRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-78%"]);
+  // 8 cards, scroll 7/8 of the way
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-82%"]);
   const [active, setActive] = useState(0);
 
   return (
     <main className="bg-cream text-ink">
-      {/* Header */}
       <section className="pt-32 px-6 md:pl-32 md:pr-10 pb-16">
         <div className="grid grid-cols-12 gap-4 items-end">
           <div className="col-span-12 md:col-span-2 marker text-ink/60">
@@ -95,7 +92,7 @@ function ProjectsPage() {
           </div>
           <div className="col-span-12 md:col-span-7">
             <h1 className="display text-6xl md:text-[10vw] leading-[0.85]">
-              Selected <span className="display-italic text-ember">work,</span><br/>
+              Selected <span className="display-italic text-ember">works,</span><br/>
               shipped <span className="display-italic">in public.</span>
             </h1>
           </div>
@@ -107,8 +104,7 @@ function ProjectsPage() {
         </div>
       </section>
 
-      {/* Horizontal scroll */}
-      <div ref={trackRef} className="relative" style={{ height: `${projects.length * 80}vh` }}>
+      <div ref={trackRef} className="relative" style={{ height: `${projects.length * 75}vh` }}>
         <div className="sticky top-0 h-screen overflow-hidden flex items-center">
           <motion.div style={{ x }} className="flex gap-6 md:gap-12 pl-6 md:pl-32 pr-[20vw]">
             {projects.map((p, i) => (
@@ -118,7 +114,6 @@ function ProjectsPage() {
         </div>
       </div>
 
-      {/* Index list */}
       <section className="px-6 md:pl-32 md:pr-10 py-32">
         <div className="grid grid-cols-12 gap-4 mb-12">
           <div className="col-span-12 md:col-span-2 marker text-ink/60"><div>03 —</div><div className="mt-1">Index</div></div>
@@ -128,11 +123,13 @@ function ProjectsPage() {
         </div>
         <ul className="border-t border-ink/30">
           {projects.map((p) => (
-            <li key={p.num} className="group border-b border-ink/30 grid grid-cols-12 gap-4 items-center py-6 md:py-8 hover:bg-ink hover:text-cream transition-colors duration-500 px-2">
-              <span className="col-span-2 mono text-xs opacity-60">{p.num}</span>
-              <span className="col-span-12 md:col-span-5 display text-3xl md:text-5xl">{p.title}</span>
-              <span className="col-span-6 md:col-span-3 mono text-xs uppercase tracking-widest opacity-70">{p.kind}</span>
-              <span className="col-span-6 md:col-span-2 text-right mono text-xs opacity-70">{p.year} →</span>
+            <li key={p.num} className="border-b border-ink/30">
+              <a href={p.href} target="_blank" rel="noopener noreferrer" className="grid grid-cols-12 gap-4 items-center py-6 md:py-8 hover:bg-ink hover:text-cream transition-colors duration-500 px-2 group">
+                <span className="col-span-2 mono text-xs opacity-60">{p.num}</span>
+                <span className="col-span-12 md:col-span-5 display text-3xl md:text-5xl">{p.title}</span>
+                <span className="col-span-6 md:col-span-3 mono text-xs uppercase tracking-widest opacity-70">{p.kind}</span>
+                <span className="col-span-6 md:col-span-2 text-right mono text-xs opacity-70 group-hover:text-ember">{p.year} ↗</span>
+              </a>
             </li>
           ))}
         </ul>
@@ -175,12 +172,14 @@ function ProjectCard({ p, onEnter }: { p: Project; onEnter: () => void }) {
 
       <div>
         <div className="mono text-xs tracking-[0.25em] uppercase opacity-70 mb-3">{p.kind}</div>
-        <h3 className="display text-6xl md:text-[8vw] leading-[0.85]">{p.title}</h3>
+        <h3 className="display text-6xl md:text-[7vw] leading-[0.85]">{p.title}</h3>
       </div>
 
       <div className="flex items-end justify-between gap-6">
-        <p className="max-w-sm text-sm md:text-base font-light leading-snug opacity-90">{p.blurb}</p>
-        <span className="mono text-xs tracking-[0.25em] uppercase shrink-0 border-b border-current pb-1">view →</span>
+        <p className="max-w-md text-sm md:text-base font-light leading-snug opacity-90">{p.blurb}</p>
+        <a href={p.href} target="_blank" rel="noopener noreferrer" className="mono text-xs tracking-[0.25em] uppercase shrink-0 border-b border-current pb-1 hover:opacity-70">
+          github →
+        </a>
       </div>
     </motion.article>
   );

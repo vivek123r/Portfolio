@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { SideNav } from "@/components/SideNav";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Cursor } from "@/components/Cursor";
+import { CommandTrigger } from "@/components/CommandTrigger";
 
 function NotFoundComponent() {
   return (
@@ -119,6 +120,7 @@ function RootComponent() {
         <SmoothScroll />
         <Cursor />
         <SideNav />
+        <CommandTrigger />
         <Outlet />
       </div>
     </QueryClientProvider>
