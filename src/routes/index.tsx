@@ -7,8 +7,8 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Vivek Ravi — AI Engineer · Full-Stack Developer" },
-      { name: "description", content: "Building AI-powered solutions. Full-stack developer specializing in AI/ML, mobile, and cloud systems. Based in Kerala." },
+      { title: "Vivek R — Developer Portfolio · AI · Mobile · Cloud" },
+      { name: "description", content: "Personal portfolio of Vivek R — IT undergrad and self-taught developer shipping projects across AI/ML, mobile, and cloud." },
     ],
   }),
 });
