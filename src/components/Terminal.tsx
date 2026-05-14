@@ -13,7 +13,7 @@ const COMMANDS: Record<string, string> = {
   date       — current time
   clear      — clear screen
   sudo       — try it.`,
-  about: `Vivek Ravi — AI Engineer & Full-Stack Developer.
+  about: `Vivek R — AI Engineer & Full-Stack Developer.
 Self-driven IT undergraduate at Viswajyothi College of
 Engineering and Technology. Builds in AI/ML, mobile, and
 cloud systems. Based in Thodupuzha, Kerala.`,

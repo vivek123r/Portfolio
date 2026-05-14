@@ -5,8 +5,8 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Vivek Ravi — Signal / Contact" },
-      { name: "description", content: "Reach Vivek Ravi — open to collaborations, freelance, and full-time roles." },
+      { title: "Vivek R — Signal / Contact" },
+      { name: "description", content: "Reach Vivek R — open to collaborations, freelance, and full-time roles." },
     ],
   }),
 });
@@ -126,7 +126,7 @@ function ContactPage() {
       </div>
 
       <footer className="mt-32 pt-8 border-t border-ink/30 grid grid-cols-12 gap-4 mono text-[10px] tracking-[0.25em] uppercase text-ink/50">
-        <div className="col-span-6 md:col-span-6">© 2026 Vivek Ravi — Independent Practice</div>
+        <div className="col-span-6 md:col-span-6">© 2026 Vivek R — Personal portfolio · built from scratch</div>
         <div className="col-span-6 md:col-span-6 text-right">Built by hand · No templates · ⌘K for terminal</div>
       </footer>
     </main>
