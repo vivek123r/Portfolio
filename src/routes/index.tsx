@@ -59,7 +59,7 @@ function Index() {
                 style={{ y }}
                 className="display text-[20vw] md:text-[15vw] leading-[0.82]"
               >
-                Vivek <span className="display-italic text-ember">Ravi.</span>
+                Vivek <span className="display-italic text-ember">R.</span>
               </motion.h1>
             </div>
           </div>
