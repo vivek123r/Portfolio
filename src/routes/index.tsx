@@ -68,8 +68,8 @@ function Index() {
             <div className="hidden md:block col-span-2" />
             <div className="col-span-12 md:col-span-6">
               <p className="text-lg md:text-2xl leading-snug font-light max-w-xl">
-                AI Engineer · Full-Stack Developer · <em className="font-serif">Creative Builder</em>.
-                I work at the intersection of <em className="font-serif">intelligence</em>, <em className="font-serif">interface</em>, and <em className="font-serif">infrastructure</em>.
+                IT undergrad · Self-taught <em className="font-serif">builder</em>.
+                I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em> — this is my work, not a company.
               </p>
               <div className="mt-6 mono text-sm flex items-center gap-2 h-6 text-ember">
                 <span className="text-ink/50">{">"}</span>
