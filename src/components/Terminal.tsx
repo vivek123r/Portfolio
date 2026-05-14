@@ -15,21 +15,25 @@ const COMMANDS: Record<string, string> = {
   sudo       — try it.`,
   about: `Vivek R — AI Engineer & Full-Stack Developer.
 Self-driven IT undergraduate at Viswajyothi College of
-Engineering and Technology. Builds in AI/ML, mobile, and
-cloud systems. Based in Thodupuzha, Kerala.`,
-  skills: `LANGUAGES   Python, JavaScript, Dart, SQL, Java
-FRAMEWORKS  React, Node.js, Flutter, FastAPI
-CLOUD       AWS (EC2, S3, IAM, CloudWatch), Docker, K8s
-AI          LangChain, LangGraph, OpenAI, n8n, ML Kit, OCR`,
+Engineering. 4 years coding. 8 GitHub projects. 3 certifications.
+Builds in AI/Automation, mobile, and cloud. Based in Kerala.`,
+  skills: `LANGUAGES    Python, JavaScript, TypeScript, Dart, SQL
+FRAMEWORKS   React, Next.js, Node.js, Flutter, FastAPI, Flask
+AI & AUTO    LangChain, LangGraph, n8n, LLMs, Prompt Engineering
+CLOUD        AWS (EC2, S3, IAM, Lambda), Docker, Kubernetes, Firebase
+TOOLS        Git, CI/CD, Jest, Postman, REST APIs, WebSockets`,
   projects: `01 EXFORGE      — AI extension builder (LangChain + Python)
 02 MINT         — SMS-based expense tracker (Flutter + Firebase)
 03 SYSMON       — real-time system monitor (Python + Flutter)
 04 GAMING ADV   — system optimizer
 05 E-SHOP       — react commerce surface
-06 SCRAPER BOT  — python web scraping suite`,
-  experience: `AWS Intern · Cydez Technologies
+06 CHATBOT EXT  — VS Code extension
+07 SCRAPER BOT  — python web scraping suite
+08 DEVFOLIO     — this portfolio`,
+  experience: `AWS Intern · Cydez Technologies (2025)
 — Managed scalable apps on EC2/S3, -20% deploy time
-— Configured IAM + CloudWatch, 99.9% uptime`,
+— Configured IAM + CloudWatch, 99.9% uptime
+B.Tech IT · Viswajyothi College of Engineering Technology`,
   contact: `email     vivek987pm@gmail.com
 phone     +91 85906 09366
 github    https://github.com/vivek123r

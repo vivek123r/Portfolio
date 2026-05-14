@@ -14,12 +14,12 @@ export const Route = createFileRoute("/")({
 });
 
 const skills = [
-  { name: "AI & ML", sub: "intelligent systems", items: ["LangChain", "LangGraph", "OpenAI API", "n8n Agents", "ML Kit", "OCR"] },
-  { name: "Mobile", sub: "cross-platform", items: ["Flutter", "Dart", "Firebase", "Firestore", "Push"] },
-  { name: "Backend", sub: "server-side power", items: ["Python", "FastAPI", "Node.js", "REST", "WebSockets"] },
-  { name: "Frontend", sub: "interfaces", items: ["React", "JavaScript", "Tailwind", "HTML/CSS"] },
-  { name: "Cloud / DevOps", sub: "infrastructure", items: ["AWS EC2/S3", "IAM", "Docker", "Kubernetes", "CI/CD"] },
-  { name: "Tools / Lang", sub: "the craft", items: ["Git", "Java", "SQL", "Selenium", "PyQt"] },
+  { name: "AI & Automation", sub: "intelligent systems", items: ["LangChain", "LangGraph", "n8n", "LLMs", "Prompt Engineering", "Vector Databases", "OCR", "AI Agents"] },
+  { name: "Mobile", sub: "cross-platform", items: ["Flutter", "Dart", "Firebase", "Firestore", "WebSockets"] },
+  { name: "Backend", sub: "server-side power", items: ["Python", "Node.js", "FastAPI", "Flask", "REST APIs", "WebSockets"] },
+  { name: "Frontend", sub: "interfaces", items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS"] },
+  { name: "Cloud / DevOps", sub: "infrastructure", items: ["AWS (EC2, S3, IAM, Lambda)", "Docker", "Kubernetes", "Firebase", "CI/CD", "CloudWatch"] },
+  { name: "Tools / Lang", sub: "the craft", items: ["Git", "SQL", "Python", "TypeScript", "Jest", "Postman", "Prometheus", "Regex"] },
 ];
 
 const rotating = [
@@ -69,7 +69,7 @@ function Index() {
             <div className="col-span-12 md:col-span-6">
               <p className="text-lg md:text-2xl leading-snug font-light max-w-xl">
                 IT undergrad · Self-taught <em className="font-serif">builder</em>.
-                I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em> — this is my work, not a company.
+                I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em>.
               </p>
               <div className="mt-6 mono text-sm flex items-center gap-2 h-6 text-ember">
                 <span className="text-ink/50">{">"}</span>
@@ -95,10 +95,10 @@ function Index() {
         {/* stats row */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-ink/30 pt-8">
           {[
-            { n: "08", l: "Projects shipped" },
+            { n: "08", l: "GitHub projects" },
+            { n: "03", l: "Professional certifications" },
+            { n: "04", l: "Years coding" },
             { n: "20+", l: "Technologies" },
-            { n: "02", l: "Years coding" },
-            { n: "03", l: "Hackathons" },
           ].map((s) => (
             <div key={s.l} className="flex flex-col">
               <span className="display text-5xl md:text-7xl leading-none">{s.n}</span>
@@ -132,14 +132,14 @@ function Index() {
           <div className="col-span-12 md:col-span-2 marker text-ink/60"><div>03 —</div><div>Field log</div></div>
           <div className="col-span-12 md:col-span-10 grid md:grid-cols-2 gap-12">
             <div>
-              <div className="mono text-xs tracking-widest text-ember uppercase">2024 · AWS Intern</div>
-              <h3 className="display text-3xl md:text-5xl mt-2">Cydez Technologies</h3>
-              <p className="mt-3 text-ink/70 max-w-md">Managed scalable apps on EC2 + S3 — cut deploy time by 20%. Configured IAM and CloudWatch to maintain 99.9% uptime.</p>
-            </div>
-            <div>
               <div className="mono text-xs tracking-widest text-ember uppercase">B.Tech · IT</div>
               <h3 className="display text-3xl md:text-5xl mt-2">Viswajyothi C.E.T.</h3>
               <p className="mt-3 text-ink/70 max-w-md">Self-driven IT undergraduate. Building software in mobile, cloud, and AI between coursework and shipping.</p>
+            </div>
+            <div>
+              <div className="mono text-xs tracking-widest text-ember uppercase">2025 · AWS Intern</div>
+              <h3 className="display text-3xl md:text-5xl mt-2">Cydez Technologies</h3>
+              <p className="mt-3 text-ink/70 max-w-md">Managed scalable apps on EC2 + S3 — cut deploy time by 20%. Configured IAM and CloudWatch to maintain 99.9% uptime.</p>
             </div>
           </div>
         </div>
