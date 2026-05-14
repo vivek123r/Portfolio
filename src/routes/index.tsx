@@ -7,8 +7,8 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Vivek Ravi — AI Engineer · Full-Stack Developer" },
-      { name: "description", content: "Building AI-powered solutions. Full-stack developer specializing in AI/ML, mobile, and cloud systems. Based in Kerala." },
+      { title: "Vivek R — Developer Portfolio · AI · Mobile · Cloud" },
+      { name: "description", content: "Personal portfolio of Vivek R — IT undergrad and self-taught developer shipping projects across AI/ML, mobile, and cloud." },
     ],
   }),
 });
@@ -23,10 +23,10 @@ const skills = [
 ];
 
 const rotating = [
-  "Building AI-Powered Solutions",
-  "Shipping Mobile First",
-  "Architecting Cloud Systems",
-  "Writing Software That Lasts",
+  "Currently shipping side projects",
+  "Learning by building, daily",
+  "Open to internships & collabs",
+  "Writing code that actually runs",
 ];
 
 function Index() {
@@ -59,7 +59,7 @@ function Index() {
                 style={{ y }}
                 className="display text-[20vw] md:text-[15vw] leading-[0.82]"
               >
-                Vivek <span className="display-italic text-ember">Ravi.</span>
+                Vivek <span className="display-italic text-ember">R.</span>
               </motion.h1>
             </div>
           </div>
@@ -68,8 +68,8 @@ function Index() {
             <div className="hidden md:block col-span-2" />
             <div className="col-span-12 md:col-span-6">
               <p className="text-lg md:text-2xl leading-snug font-light max-w-xl">
-                AI Engineer · Full-Stack Developer · <em className="font-serif">Creative Builder</em>.
-                I work at the intersection of <em className="font-serif">intelligence</em>, <em className="font-serif">interface</em>, and <em className="font-serif">infrastructure</em>.
+                IT undergrad · Self-taught <em className="font-serif">builder</em>.
+                I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em> — this is my work, not a company.
               </p>
               <div className="mt-6 mono text-sm flex items-center gap-2 h-6 text-ember">
                 <span className="text-ink/50">{">"}</span>
@@ -108,19 +108,19 @@ function Index() {
         </div>
       </section>
 
-      <Marquee items={["Building AI-Powered Solutions", "Vivek Ravi", "Engineering as authorship", "AI · MOBILE · CLOUD", "Independent practice"]} />
+      <Marquee items={["Vivek R · Portfolio", "AI · Mobile · Cloud", "Student · Builder · Shipper", "Open to internships & collabs", "Currently building →"]} />
 
-      {/* MANIFESTO */}
+      {/* ABOUT */}
       <section className="px-6 md:pl-32 md:pr-10 py-32 md:py-48">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2 marker text-ink/60">
             <div>02 —</div>
-            <div className="mt-1">Manifesto</div>
+            <div className="mt-1">About me</div>
           </div>
           <div className="col-span-12 md:col-span-10">
             <p className="display text-4xl md:text-7xl text-ink/30 leading-[1.05]">
-              <span className="text-ink">Software is the last craft</span> where one person can still draw the blueprint, mill the parts, and sign the cabinet.{" "}
-              <span className="text-ember">I build that way</span> — small teams, deep ownership, opinionated taste.
+              <span className="text-ink">I'm a developer who learns by shipping.</span> I teach myself what I need, wire it together end-to-end, and keep iterating until it actually works.{" "}
+              <span className="text-ember">This site is the record of that</span> — the projects, the stack, the obsession.
             </p>
           </div>
         </div>

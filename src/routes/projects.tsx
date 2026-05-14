@@ -6,7 +6,7 @@ export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
   head: () => ({
     meta: [
-      { title: "Vivek Ravi — Catalogue / Selected Works" },
+      { title: "Vivek R — Catalogue / Selected Works" },
       { name: "description", content: "Selected works: AI agents, mobile apps, system tools, web platforms." },
     ],
   }),
