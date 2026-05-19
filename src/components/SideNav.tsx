@@ -17,7 +17,7 @@ export function SideNav() {
             Vivek_R<span className="text-ember">●</span>
           </Link>
           <div className="mono text-[10px] tracking-[0.2em] uppercase hidden md:flex gap-6">
-            <span>BLR · 12.97°N</span>
+            <span>IND · 12.97°N</span>
             <span>v.2026.05</span>
           </div>
         </div>
