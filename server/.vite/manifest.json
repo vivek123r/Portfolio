@@ -1,0 +1,109 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "/home/runner/work/Portfolio/Portfolio/src/styles.css": {
+    "file": "assets/styles-DxtCuMz7.css",
+    "src": "/home/runner/work/Portfolio/Portfolio/src/styles.css"
+  },
+  "_router-CrudpLOg.js": {
+    "file": "assets/router-CrudpLOg.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-7ANBZ6hN.js"
+    ],
+    "dynamicImports": [
+      "src/routes/projects.tsx?tsr-split=component",
+      "src/routes/contact.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-DxtCuMz7.css"
+    ]
+  },
+  "_server-7ANBZ6hN.js": {
+    "file": "assets/server-7ANBZ6hN.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-CrudpLOg.js",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_use-transform-CkcCk82L.js": {
+    "file": "assets/use-transform-CkcCk82L.js",
+    "name": "use-transform",
+    "imports": [
+      "_server-7ANBZ6hN.js",
+      "_router-CrudpLOg.js"
+    ]
+  },
+  "_worker-entry-B0X9mh7G.js": {
+    "file": "assets/worker-entry-B0X9mh7G.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-7ANBZ6hN.js"
+    ]
+  },
+  "src/routes/contact.tsx?tsr-split=component": {
+    "file": "assets/contact-D5cEdVKy.js",
+    "name": "contact",
+    "src": "src/routes/contact.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-7ANBZ6hN.js"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-DNANGFM-.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-7ANBZ6hN.js",
+      "_router-CrudpLOg.js",
+      "_use-transform-CkcCk82L.js"
+    ]
+  },
+  "src/routes/projects.tsx?tsr-split=component": {
+    "file": "assets/projects-BH4YIQ9z.js",
+    "name": "projects",
+    "src": "src/routes/projects.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-7ANBZ6hN.js",
+      "_router-CrudpLOg.js",
+      "_use-transform-CkcCk82L.js"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-BzVFeqq4.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-B0X9mh7G.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-CCV5YAw4.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-B0X9mh7G.js"
+    ]
+  }
+}
