@@ -31,7 +31,7 @@ export function SideNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="group flex items-center gap-3 mono text-[10px] tracking-[0.25em] uppercase"
+              className="group flex items-center gap-3 mono text-lg tracking-[0.15em] uppercase font-semibold"
             >
               <span
                 className={`h-px transition-all duration-500 ${
@@ -55,7 +55,7 @@ export function SideNav() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`flex-1 py-4 mono text-[10px] tracking-[0.2em] uppercase text-center ${
+                className={`flex-1 py-4 mono text-sm tracking-[0.15em] uppercase text-center font-semibold ${
                   active ? "text-ember" : "text-ink/60"
                 }`}
               >
