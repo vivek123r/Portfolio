@@ -318,10 +318,14 @@ function ProjectCard({ p, onEnter, onOpen }: { p: Project; onEnter: () => void; 
 function CaseStudyModal({ project, onClose }: { project: Project; onClose: () => void }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    
     document.addEventListener("keydown", onKey);
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    
     return () => {
       document.removeEventListener("keydown", onKey);
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     };
   }, [onClose]);
@@ -332,7 +336,7 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[100] bg-ink/80 backdrop-blur-sm overflow-y-auto"
+      className="fixed inset-0 z-100 bg-ink/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
       onClick={onClose}
     >
       <motion.div
@@ -341,8 +345,10 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
         exit={{ y: 40, opacity: 0 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => e.stopPropagation()}
-        className="relative min-h-screen bg-cream text-ink max-w-6xl mx-auto md:my-8 md:rounded-sm"
+        className="relative bg-cream text-ink max-w-6xl w-full max-h-[90vh] overflow-y-auto overscroll-contain md:rounded-sm shadow-2xl"
+        data-lenis-prevent
       >
+        
         <button
           onClick={onClose}
           className="fixed md:absolute top-4 right-4 z-10 mono text-xs tracking-widest uppercase bg-ink text-cream px-4 py-2 hover:bg-ember transition-colors"
@@ -351,7 +357,7 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 w-full md:h-[70vh]">
-          <div className="relative overflow-hidden bg-ink aspect-[4/3] md:aspect-auto md:h-full">
+          <div className="relative overflow-hidden bg-ink aspect-4/3 md:aspect-auto md:h-full">
             <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
           </div>
           <div className="relative bg-cream text-ink flex flex-col justify-between p-8 md:p-12">
@@ -379,7 +385,7 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
           </div>
         </div>
 
-        <div className="px-6 md:px-10 py-10 md:py-16 grid grid-cols-12 gap-6">
+        <div className="px-6 md:px-10 py-10 md:py-16 pb-20 md:pb-32 grid grid-cols-12 gap-6">
           <aside className="col-span-12 md:col-span-4 space-y-6 md:sticky md:top-6 self-start">
             <MetaRow label="Role" value={project.role} />
             <MetaRow label="Status" value={project.status} />
