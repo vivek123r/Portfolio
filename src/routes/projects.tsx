@@ -429,9 +429,27 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
               </ul>
             </Section>
 
-            <div className="aspect-video overflow-hidden bg-ink/5 border border-ink/10">
-              <img src={project.image} alt={`${project.title} detail`} className="w-full h-full object-cover" />
-            </div>
+            <Section label="Screens">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {(project.gallery ?? [project.image]).map((src, i) => (
+                  <a
+                    key={i}
+                    href={src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block bg-ink/5 border border-ink/10 overflow-hidden"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} screen ${i + 1}`}
+                      loading="lazy"
+                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    />
+                  </a>
+                ))}
+              </div>
+            </Section>
+
           </div>
         </div>
 
