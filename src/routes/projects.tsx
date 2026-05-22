@@ -341,16 +341,32 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
           close ✕  ·  esc
         </button>
 
-        <div className="relative w-full aspect-[16/10] overflow-hidden bg-ink">
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 right-6">
-            <div className="mono text-xs tracking-[0.25em] uppercase text-cream/80 mb-3">
-              {project.num} · {project.kind} · {project.year}
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:h-[70vh]">
+          <div className="relative overflow-hidden bg-ink aspect-[4/3] md:aspect-auto md:h-full">
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          </div>
+          <div className="relative bg-cream text-ink flex flex-col justify-between p-8 md:p-12">
+            <div className="flex items-start justify-between mono text-xs tracking-[0.25em] uppercase text-ink/70">
+              <div>
+                <div>{project.num} / case study</div>
+                <div className="mt-1 opacity-60">{project.year}</div>
+              </div>
+              <div className="text-right">
+                {project.stack.slice(0, 3).map((s) => <div key={s}>{s}</div>)}
+              </div>
             </div>
-            <h2 className="display text-5xl md:text-8xl leading-[0.9] text-cream">
-              {project.title}
-            </h2>
+
+            <div>
+              <div className="mono text-xs tracking-[0.25em] uppercase text-ember mb-3">{project.kind}</div>
+              <h2 className="display text-5xl md:text-7xl leading-[0.85]">{project.title}</h2>
+            </div>
+
+            <div className="flex items-end justify-between gap-6">
+              <p className="max-w-md text-sm md:text-base font-light leading-snug text-ink/80">{project.blurb}</p>
+              <span className="mono text-xs tracking-[0.25em] uppercase shrink-0 border-b border-ink pb-1">
+                case study ↓
+              </span>
+            </div>
           </div>
         </div>
 
