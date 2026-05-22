@@ -37,6 +37,7 @@ type Project = {
   demo?: string;
   tone: "ember" | "ink" | "amber" | "paper";
   image: string;
+  gallery?: string[];
   role: string;
   status: string;
   problem: string;
@@ -52,7 +53,7 @@ const projects: Project[] = [
     num: "001", title: "EXFORGE", kind: "AI Extension Builder", year: "2025",
     stack: ["LangChain", "Python", "OpenAI", "Agents"],
     blurb: "AI-powered extension builder that uses intelligent agents to write production-ready code from plain-English prompts.",
-    href: `${GH}/Extension`, tone: "ember", image: exforgeImg,
+    href: `${GH}/Extension`, tone: "ember", image: exforge1, gallery: [exforge1, exforge2],
     role: "Sole builder · Architecture, agent design, prompt eng.",
     status: "In active development",
     problem: "Writing browser/IDE extensions is repetitive — manifest, views, config, packaging. Most prompt-to-code tools stop at a snippet and leave you stitching.",
@@ -70,7 +71,7 @@ const projects: Project[] = [
     num: "002", title: "MINT", kind: "SMS Expense Tracker", year: "2024",
     stack: ["Flutter", "Firebase", "Dart"],
     blurb: "Privacy-first expense tracker that parses bank SMS on-device with ~99% accuracy.",
-    href: `${GH}/ExpenseTracker_sms-based`, tone: "amber", image: mintImg,
+    href: `${GH}/ExpenseTracker_sms-based`, tone: "amber", image: mint1, gallery: [mint1, mint2],
     role: "Sole builder · App, parser, sync",
     status: "Released · used personally",
     problem: "Indian bank SMS formats are messy and inconsistent. Existing apps either upload them to a server (privacy hit) or miss half the transactions.",
@@ -88,7 +89,7 @@ const projects: Project[] = [
     num: "003", title: "SYSMON", kind: "System Monitor + Remote", year: "2024",
     stack: ["Python", "FastAPI", "Flutter", "WebSockets"],
     blurb: "Secure real-time PC monitoring + remote control with a paired mobile companion.",
-    href: `${GH}/SystemMonitor`, tone: "ink", image: sysmonImg,
+    href: `${GH}/SystemMonitor`, tone: "ink", image: sysmon1, gallery: [sysmon1, sysmon2, sysmon3],
     role: "Sole builder · Daemon, API, mobile client",
     status: "Daily-driver tool",
     problem: "I wanted to glance at my desktop's CPU/GPU/network from my phone, kill stuck processes, and send files over LAN — without installing five different apps.",
@@ -121,7 +122,7 @@ const projects: Project[] = [
     num: "005", title: "E-SHOP", kind: "Commerce Surface", year: "2024",
     stack: ["React", "Node", "Stripe"],
     blurb: "Modern e-commerce front with catalog, cart, payments, auth, and order tracking.",
-    href: `${GH}/e-shop`, tone: "ember", image: eshopImg,
+    href: `${GH}/e-shop`, tone: "ember", image: eshop1, gallery: [eshop1, eshop2, eshop3],
     role: "Full-stack build",
     status: "Coursework / portfolio piece",
     problem: "Most starter shops ship with bloated templates. I wanted a clean, fast surface I could actually reuse.",
