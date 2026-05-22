@@ -4,6 +4,7 @@ import { SideNav } from "@/components/SideNav";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Cursor } from "@/components/Cursor";
 import { CommandTrigger } from "@/components/CommandTrigger";
+import { EngagementPrompt } from "@/components/EngagementPrompt";
 
 function NotFoundComponent() {
   return (
@@ -91,6 +92,7 @@ function RootComponent() {
         <Cursor />
         <SideNav />
         <CommandTrigger />
+        <EngagementPrompt />
         <Outlet />
       </div>
     </QueryClientProvider>
