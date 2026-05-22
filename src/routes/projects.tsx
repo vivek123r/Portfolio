@@ -1,11 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import exforgeImg from "@/assets/projects/exforge.jpg";
-import mintImg from "@/assets/projects/mint.jpg";
-import sysmonImg from "@/assets/projects/sysmon.jpg";
+import exforge1 from "@/assets/projects/exforge-1.png";
+import exforge2 from "@/assets/projects/exforge-2.png";
+import mint1 from "@/assets/projects/mint-1.png";
+import mint2 from "@/assets/projects/mint-2.png";
+import sysmon1 from "@/assets/projects/sysmon-1.png";
+import sysmon2 from "@/assets/projects/sysmon-2.png";
+import sysmon3 from "@/assets/projects/sysmon-3.jpg";
 import gamingImg from "@/assets/projects/gaming.jpg";
-import eshopImg from "@/assets/projects/eshop.jpg";
+import eshop1 from "@/assets/projects/eshop-1.png";
+import eshop2 from "@/assets/projects/eshop-2.png";
+import eshop3 from "@/assets/projects/eshop-3.png";
 import chatbotImg from "@/assets/projects/chatbot.jpg";
 import scraperImg from "@/assets/projects/scraper.jpg";
 import devfolioImg from "@/assets/projects/devfolio.jpg";
@@ -31,6 +37,7 @@ type Project = {
   demo?: string;
   tone: "ember" | "ink" | "amber" | "paper";
   image: string;
+  gallery?: string[];
   role: string;
   status: string;
   problem: string;
@@ -46,7 +53,7 @@ const projects: Project[] = [
     num: "001", title: "EXFORGE", kind: "AI Extension Builder", year: "2025",
     stack: ["LangChain", "Python", "OpenAI", "Agents"],
     blurb: "AI-powered extension builder that uses intelligent agents to write production-ready code from plain-English prompts.",
-    href: `${GH}/Extension`, tone: "ember", image: exforgeImg,
+    href: `${GH}/Extension`, tone: "ember", image: exforge1, gallery: [exforge1, exforge2],
     role: "Sole builder · Architecture, agent design, prompt eng.",
     status: "In active development",
     problem: "Writing browser/IDE extensions is repetitive — manifest, views, config, packaging. Most prompt-to-code tools stop at a snippet and leave you stitching.",
@@ -64,7 +71,7 @@ const projects: Project[] = [
     num: "002", title: "MINT", kind: "SMS Expense Tracker", year: "2024",
     stack: ["Flutter", "Firebase", "Dart"],
     blurb: "Privacy-first expense tracker that parses bank SMS on-device with ~99% accuracy.",
-    href: `${GH}/ExpenseTracker_sms-based`, tone: "amber", image: mintImg,
+    href: `${GH}/ExpenseTracker_sms-based`, tone: "amber", image: mint1, gallery: [mint1, mint2],
     role: "Sole builder · App, parser, sync",
     status: "Released · used personally",
     problem: "Indian bank SMS formats are messy and inconsistent. Existing apps either upload them to a server (privacy hit) or miss half the transactions.",
@@ -82,7 +89,7 @@ const projects: Project[] = [
     num: "003", title: "SYSMON", kind: "System Monitor + Remote", year: "2024",
     stack: ["Python", "FastAPI", "Flutter", "WebSockets"],
     blurb: "Secure real-time PC monitoring + remote control with a paired mobile companion.",
-    href: `${GH}/SystemMonitor`, tone: "ink", image: sysmonImg,
+    href: `${GH}/SystemMonitor`, tone: "ink", image: sysmon1, gallery: [sysmon1, sysmon2, sysmon3],
     role: "Sole builder · Daemon, API, mobile client",
     status: "Daily-driver tool",
     problem: "I wanted to glance at my desktop's CPU/GPU/network from my phone, kill stuck processes, and send files over LAN — without installing five different apps.",
@@ -115,7 +122,7 @@ const projects: Project[] = [
     num: "005", title: "E-SHOP", kind: "Commerce Surface", year: "2024",
     stack: ["React", "Node", "Stripe"],
     blurb: "Modern e-commerce front with catalog, cart, payments, auth, and order tracking.",
-    href: `${GH}/e-shop`, tone: "ember", image: eshopImg,
+    href: `${GH}/e-shop`, tone: "ember", image: eshop1, gallery: [eshop1, eshop2, eshop3],
     role: "Full-stack build",
     status: "Coursework / portfolio piece",
     problem: "Most starter shops ship with bloated templates. I wanted a clean, fast surface I could actually reuse.",
@@ -422,9 +429,27 @@ function CaseStudyModal({ project, onClose }: { project: Project; onClose: () =>
               </ul>
             </Section>
 
-            <div className="aspect-video overflow-hidden bg-ink/5 border border-ink/10">
-              <img src={project.image} alt={`${project.title} detail`} className="w-full h-full object-cover" />
-            </div>
+            <Section label="Screens">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {(project.gallery ?? [project.image]).map((src, i) => (
+                  <a
+                    key={i}
+                    href={src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block bg-ink/5 border border-ink/10 overflow-hidden"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} screen ${i + 1}`}
+                      loading="lazy"
+                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    />
+                  </a>
+                ))}
+              </div>
+            </Section>
+
           </div>
         </div>
 
