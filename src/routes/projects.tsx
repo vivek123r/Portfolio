@@ -279,28 +279,36 @@ function ProjectCard({ p, onEnter, onOpen }: { p: Project; onEnter: () => void; 
       onViewportEnter={onEnter}
       viewport={{ amount: 0.5 }}
       onClick={onOpen}
-      className={`shrink-0 w-[80vw] md:w-[55vw] h-[70vh] ${tones[p.tone]} relative overflow-hidden flex flex-col justify-between p-8 md:p-12 hover-lift cursor-pointer group`}
+      className={`shrink-0 w-[80vw] md:w-[55vw] h-[70vh] ${tones[p.tone]} relative overflow-hidden flex flex-col hover-lift cursor-pointer group`}
     >
-      <div className="flex items-start justify-between">
-        <div className="mono text-xs tracking-[0.25em] uppercase opacity-80">
-          <div>{p.num} / case study</div>
-          <div className="mt-1 opacity-60">{p.year}</div>
-        </div>
-        <div className="mono text-xs tracking-[0.25em] uppercase opacity-80 text-right">
-          {p.stack.slice(0, 3).map((s) => <div key={s}>{s}</div>)}
+      <div className="relative h-1/2 w-full overflow-hidden bg-ink/20">
+        <img
+          src={p.image}
+          alt={p.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute top-0 left-0 right-0 p-6 md:p-8 flex items-start justify-between mono text-xs tracking-[0.25em] uppercase text-cream">
+          <div className="bg-ink/60 backdrop-blur-sm px-2 py-1">
+            <div>{p.num} / case</div>
+            <div className="mt-1 opacity-70">{p.year}</div>
+          </div>
+          <div className="bg-ink/60 backdrop-blur-sm px-2 py-1 text-right">
+            {p.stack.slice(0, 3).map((s) => <div key={s}>{s}</div>)}
+          </div>
         </div>
       </div>
 
-      <div>
-        <div className="mono text-xs tracking-[0.25em] uppercase opacity-70 mb-3">{p.kind}</div>
-        <h3 className="display text-6xl md:text-[7vw] leading-[0.85]">{p.title}</h3>
-      </div>
-
-      <div className="flex items-end justify-between gap-6">
-        <p className="max-w-md text-sm md:text-base font-light leading-snug opacity-90">{p.blurb}</p>
-        <span className="mono text-xs tracking-[0.25em] uppercase shrink-0 border-b border-current pb-1">
-          open case →
-        </span>
+      <div className="h-1/2 flex flex-col justify-between p-6 md:p-10">
+        <div>
+          <div className="mono text-xs tracking-[0.25em] uppercase opacity-70 mb-3">{p.kind}</div>
+          <h3 className="display text-5xl md:text-[5.5vw] leading-[0.85]">{p.title}</h3>
+        </div>
+        <div className="flex items-end justify-between gap-6">
+          <p className="max-w-md text-sm md:text-base font-light leading-snug opacity-90">{p.blurb}</p>
+          <span className="mono text-xs tracking-[0.25em] uppercase shrink-0 border-b border-current pb-1">
+            open case →
+          </span>
+        </div>
       </div>
     </motion.article>
   );
