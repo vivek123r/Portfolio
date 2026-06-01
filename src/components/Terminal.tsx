@@ -22,14 +22,15 @@ FRAMEWORKS   React, Next.js, Node.js, Flutter, FastAPI, Flask
 AI & AUTO    LangChain, LangGraph, n8n, LLMs, Prompt Engineering
 CLOUD        AWS (EC2, S3, IAM, Lambda), Docker, Kubernetes, Firebase
 TOOLS        Git, CI/CD, Jest, Postman, REST APIs, WebSockets`,
-  projects: `01 EXFORGE      — AI extension builder (LangChain + Python)
-02 MINT         — SMS-based expense tracker (Flutter + Firebase)
-03 SYSMON       — real-time system monitor (Python + Flutter)
-04 GAMING ADV   — system optimizer
-05 E-SHOP       — react commerce surface
-06 CHATBOT EXT  — VS Code extension
-07 SCRAPER BOT  — python web scraping suite
-08 DEVFOLIO     — this portfolio`,
+  projects: `01 RONIN        — AI product research platform (LangGraph + FastAPI)
+02 EXFORGE      — AI extension builder (LangChain + Python)
+03 MINT         — SMS-based expense tracker (Flutter + Firebase)
+04 SYSMON       — real-time system monitor (Python + Flutter)
+05 GAMING ADV   — system optimizer
+06 E-SHOP       — react commerce surface
+07 CHATBOT EXT  — browser extension
+08 SCRAPER BOT  — python web scraping suite
+09 DEVFOLIO     — this portfolio`,
   experience: `AWS Intern · Cydez Technologies (2025)
 — Managed scalable apps on EC2/S3, -20% deploy time
 — Configured IAM + CloudWatch, 99.9% uptime

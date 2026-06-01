@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,700;9..144,900&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap");
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,700;9..144,900&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -48,7 +48,7 @@
   --paper: oklch(0.92 0.022 78);
   --ink: oklch(0.18 0.012 60);
   --ember: oklch(0.58 0.18 38);   /* burnt orange */
-  --rust:  oklch(0.45 0.14 35);
+  --rust:  oklch(0.48 0.22 25);
   --amber: oklch(0.78 0.16 78);   /* terminal amber */
 
   --background: var(--cream);

@@ -15,6 +15,9 @@ import eshop3 from "@/assets/projects/eshop-3.png";
 import chatbotImg from "@/assets/projects/chatbot.jpg";
 import scraperImg from "@/assets/projects/scraper.jpg";
 import devfolioImg from "@/assets/projects/devfolio.jpg";
+import ronin1 from "@/assets/projects/Ronin1.png";
+import ronin2 from "@/assets/projects/Ronin2.png";
+import ronin3 from "@/assets/projects/Ronin3.png";
 
 export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
@@ -35,7 +38,7 @@ type Project = {
   blurb: string;
   href: string;
   demo?: string;
-  tone: "ember" | "ink" | "amber" | "paper";
+  tone: "ember" | "ink" | "amber" | "paper" | "rust";
   image: string;
   gallery?: string[];
   role: string;
@@ -50,7 +53,27 @@ const GH = "https://github.com/vivek123r";
 
 const projects: Project[] = [
   {
-    num: "001", title: "EXFORGE", kind: "AI Extension Builder", year: "2025",
+    num: "001", title: "RONIN", kind: "AI Product Research Platform", year: "2025",
+    stack: ["Python", "FastAPI", "LangGraph", "DeepSeek", "React", "Framer Motion", "RapidAPI", "Tavily"],
+    blurb: "Multi-agent AI platform that deploys 4 parallel agents to research Amazon, YouTube, and the web — then ranks everything and surfaces the single best product recommendation with scores, images, and a buy link.",
+    href: `${GH}/ronin`, tone: "rust", image: ronin1, gallery: [ronin1, ronin2, ronin3],
+    role: "Full-stack builder",
+    status: "Local / open-source",
+    problem: "Product research is fragmented across Amazon listings, YouTube reviews, and random blog posts. You have to synthesize all of it manually, with no single trusted score.",
+    approach: "LangGraph StateGraph orchestrates an intent classifier that routes queries into either a discovery or comparison pipeline. Parallel agents hit Amazon (RapidAPI), YouTube transcripts, and Tavily web search simultaneously. A ranker agent scores each candidate on Quality (80%), Price (10%), and Availability (10%) and returns a single winner.",
+    features: [
+      "4 parallel AI agents: search, review, price, ranker",
+      "SSE streaming — results surface as agents finish",
+      "Intent classifier routes discovery vs. comparison queries",
+      "Amazon product data via RapidAPI Real-Time Amazon Data",
+      "YouTube review transcripts via youtube-transcript-api",
+      "Tavily web search for editorial and forum signals",
+      "SpiderHive canvas animation shows agent activity live",
+      "Combined score /100 with per-dimension breakdown",
+    ],
+  },
+  {
+    num: "002", title: "EXFORGE", kind: "AI Extension Builder", year: "2025",
     stack: ["LangChain", "FastAPI", "ChromaDB", "OpenRouter", "Agents"],
     blurb: "Full-stack AI-powered platform that enables users to generate, customize, and manage browser extensions without coding. Intelligent suggestions, streaming code generation, and persistent context storage.",
     href: `${GH}/Extension`, tone: "ember", image: exforge1, gallery: [exforge1, exforge2],
@@ -70,7 +93,7 @@ const projects: Project[] = [
     metrics: [{ label: "Avg gen time", value: "~45s" }, { label: "Files / run", value: "8–14" }],
   },
   {
-    num: "002", title: "MINT", kind: "SMS Expense Tracker", year: "2024",
+    num: "003", title: "MINT", kind: "SMS Expense Tracker", year: "2024",
     stack: ["Flutter", "Dart", "Firebase Auth", "Firestore", "MLKit", "Gemini AI", "fl_chart"],
     blurb: "Privacy-first expense tracker with on-device SMS parsing, bill scanning via Gemini AI, and smart categorization. Three-tab interface: dashboard, manual tracking, and automated SMS transactions.",
     href: `${GH}/ExpenseTracker_sms-based`, tone: "amber", image: mint1, gallery: [mint1, mint2],
@@ -93,7 +116,7 @@ const projects: Project[] = [
     metrics: [{ label: "Parse accuracy", value: "~99%" }, { label: "Banks supported", value: "12+" }],
   },
   {
-    num: "003", title: "SYSMON", kind: "System Monitor + Remote", year: "2024",
+    num: "004", title: "SYSMON", kind: "System Monitor + Remote", year: "2024",
     stack: ["Python", "FastAPI", "Flutter", "Firebase", "WebSockets"],
     blurb: "Full-stack cross-platform system monitoring and remote control. Real-time PC metrics (CPU, RAM, GPU, Disk, Network) accessible from iOS, Android, Web, Linux, and macOS with secure Firebase auth.",
     href: `${GH}/SystemMonitor`, tone: "ink", image: sysmon1, gallery: [sysmon1, sysmon2, sysmon3],
@@ -110,7 +133,7 @@ const projects: Project[] = [
     ],
   },
   {
-    num: "004", title: "GAMING ADVISOR", kind: "Performance Tuner", year: "2024",
+    num: "005", title: "GAMING ADVISOR", kind: "Performance Tuner", year: "2024",
     stack: ["Python", "Psutil", "GPU Monitoring", "Desktop UI"],
     blurb: "Reads your rig and recommends precise settings to push every frame.",
     href: `${GH}/gaming-advisor`, tone: "paper", image: gamingImg,
@@ -128,7 +151,7 @@ const projects: Project[] = [
     ],
   },
   {
-    num: "005", title: "E-SHOP", kind: "Commerce Surface", year: "2024",
+    num: "006", title: "E-SHOP", kind: "Commerce Surface", year: "2024",
     stack: ["React", "Node", "Firebase", "Stripe"],
     blurb: "Full-stack e-commerce platform with Firebase authentication, multi-category product catalog, secure Stripe payments, and real-time inventory management.",
     href: `${GH}/e-shop`, tone: "ember", image: eshop1, gallery: [eshop1, eshop2, eshop3],
@@ -147,7 +170,7 @@ const projects: Project[] = [
     ],
   },
   {
-    num: "006", title: "CHATBOT EXT", kind: "Browser Extension", year: "2024",
+    num: "007", title: "CHATBOT EXT", kind: "Browser Extension", year: "2024",
     stack: ["JS", "Chrome APIs", "OpenAI"],
     blurb: "Browser extension that puts an AI chat companion one click away on any tab — ask, summarise, or rewrite without leaving the page.",
     href: `${GH}/Extension`, tone: "amber", image: chatbotImg,
@@ -164,7 +187,7 @@ const projects: Project[] = [
     ],
   },
   {
-    num: "007", title: "SCRAPER BOT", kind: "Web Scraping Suite", year: "2023",
+    num: "008", title: "SCRAPER BOT", kind: "Web Scraping Suite", year: "2023",
     stack: ["Python", "Selenium", "Scrapy", "BeautifulSoup"],
     blurb: "Advanced scraping pipeline with anti-bot bypass and a clean processing layer.",
     href: `${GH}/chatbot_python_webScraping`, tone: "ink", image: scraperImg,
@@ -180,7 +203,7 @@ const projects: Project[] = [
     ],
   },
   {
-    num: "008", title: "DEVFOLIO", kind: "Portfolio Engine", year: "2026",
+    num: "009", title: "DEVFOLIO", kind: "Portfolio Engine", year: "2026",
     stack: ["React", "TypeScript", "Tailwind", "Framer Motion"],
     blurb: "The site you're reading. A small system for editorial developer storytelling.",
     href: `${GH}/DevFolio`, demo: "/", tone: "paper", image: devfolioImg,
@@ -285,6 +308,7 @@ function ProjectCard({ p, onEnter, onOpen }: { p: Project; onEnter: () => void; 
     ink: "bg-ink text-cream",
     amber: "bg-amber text-ink",
     paper: "bg-paper text-ink",
+    rust: "bg-rust text-cream",
   };
   return (
     <motion.article
