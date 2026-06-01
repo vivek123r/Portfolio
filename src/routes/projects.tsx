@@ -53,7 +53,7 @@ const GH = "https://github.com/vivek123r";
 
 const projects: Project[] = [
   {
-    num: "001", title: "RONIN", kind: "AI Product Research Platform", year: "2025",
+    num: "001", title: "RONIN", kind: "AI Product Research Platform", year: "2026",
     stack: ["Python", "FastAPI", "LangGraph", "DeepSeek", "React", "Framer Motion", "RapidAPI", "Tavily"],
     blurb: "Multi-agent AI platform that deploys 4 parallel agents to research Amazon, YouTube, and the web — then ranks everything and surfaces the single best product recommendation with scores, images, and a buy link.",
     href: `${GH}/ronin`, tone: "rust", image: ronin1, gallery: [ronin1, ronin2, ronin3],
