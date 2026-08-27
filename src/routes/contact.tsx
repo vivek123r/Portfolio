@@ -13,7 +13,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const channels = [
-  { label: "Email",    value: "vivekravi9496497657@gmail.com",   href: "mailto:vivekravi9496497657@gmail.com" },
+  { label: "Email",    value: "vivek987pm@gmail.com",   href: "mailto:vivek987pm@gmail.com" },
   { label: "GitHub",   value: "@vivek123r",              href: "https://github.com/vivek123r" },
   { label: "LinkedIn", value: "/in/vivek-r-015008188",   href: "https://www.linkedin.com/in/vivek-r-015008188" },
   { label: "Phone",    value: "+91 85906 09366",         href: "tel:+918590609366" },
@@ -27,7 +27,7 @@ function ContactPage() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      const res = await fetch("https://formsubmit.co/ajax/vivekravi9496497657@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/vivek987pm@gmail.com", {
         method: "POST",
         body: new FormData(e.currentTarget),
       });
@@ -100,7 +100,7 @@ function ContactPage() {
             <motion.div initial={{ scale: 0.97, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="border border-ink p-8 md:p-10 bg-paper rounded-2xl md:rounded-none">
               <div className="mono text-xs tracking-[0.25em] uppercase text-ember mb-4 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-ember animate-pulse" /> delivered</div>
               <h2 className="display text-3xl md:text-4xl">Signal received.<br/><span className="display-italic">Talk soon.</span></h2>
-              <p className="mt-3 text-sm text-ink/60">I'll reply within 48 hours. You can also <a href="mailto:vivekravi9496497657@gmail.com" className="underline decoration-ember underline-offset-4">email directly</a>.</p>
+              <p className="mt-3 text-sm text-ink/60">I'll reply within 48 hours. You can also <a href="mailto:vivek987pm@gmail.com" className="underline decoration-ember underline-offset-4">email directly</a>.</p>
             </motion.div>
           ) : (
             <form onSubmit={onSubmit} className="border border-ink/12 md:border-t md:border-ink/30 bg-cream md:bg-transparent rounded-2xl md:rounded-none p-5 md:p-0 shadow-sm md:shadow-none">
@@ -136,7 +136,7 @@ function ContactPage() {
               {status === "error" && (
                 <div className="mt-4 mono text-xs uppercase tracking-widest text-ember bg-ember/10 border border-ember/20 p-3 rounded-xl text-center">● transmission failed — try again or email directly.</div>
               )}
-              <div className="md:hidden mt-3 mono text-[10px] tracking-[0.2em] uppercase text-ink/40 text-center">or email vivekravi9496497657@gmail.com</div>
+              <div className="md:hidden mt-3 mono text-[10px] tracking-[0.2em] uppercase text-ink/40 text-center">or email vivek987pm@gmail.com</div>
             </form>
           )}
         </motion.section>

@@ -38,7 +38,7 @@ AWS Intern · Cydez Technologies (2025)
 — Managed scalable apps on EC2/S3, -20% deploy time
 — Configured IAM + CloudWatch, 99.9% uptime
 B.Tech IT · Viswajyothi College of Engineering Technology`,
-  contact: `email     vivekravi9496497657@gmail.com
+  contact: `email     vivek987pm@gmail.com
 phone     +91 85906 09366
 github    https://github.com/vivek123r
 linkedin  /in/vivek-r-015008188

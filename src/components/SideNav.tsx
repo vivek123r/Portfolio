@@ -123,7 +123,7 @@ export function SideNav() {
                   })}
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3 mono text-[10px] tracking-[0.2em] uppercase text-ink/60">
-                  <a href="mailto:vivekravi9496497657@gmail.com" className="px-4 py-3 border border-ink/20 flex-1 text-center hover:bg-ink hover:text-cream transition-colors">Email</a>
+                  <a href="mailto:vivek987pm@gmail.com" className="px-4 py-3 border border-ink/20 flex-1 text-center hover:bg-ink hover:text-cream transition-colors">Email</a>
                   <a href="https://github.com/vivek123r" target="_blank" rel="noopener noreferrer" className="px-4 py-3 border border-ink/20 flex-1 text-center hover:bg-ink hover:text-cream transition-colors">GitHub</a>
                   <a href="https://www.linkedin.com/in/vivek-r-015008188" target="_blank" rel="noopener noreferrer" className="px-4 py-3 border border-ink/20 flex-1 text-center hover:bg-ink hover:text-cream transition-colors">LinkedIn</a>
                 </div>
