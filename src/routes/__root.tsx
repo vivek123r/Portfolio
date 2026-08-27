@@ -5,6 +5,10 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { Cursor } from "@/components/Cursor";
 import { CommandTrigger } from "@/components/CommandTrigger";
 import { EngagementPrompt } from "@/components/EngagementPrompt";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { Spotlight } from "@/components/Spotlight";
+import { Aurora } from "@/components/Aurora";
+import { Loader } from "@/components/Loader";
 
 function NotFoundComponent() {
   return (
@@ -67,7 +71,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { title: "Vivek R — Full-Stack Developer · AI/ML · Mobile · Systems" },
       { name: "description", content: "Portfolio of Vivek R. Editorial-grade engineering across AI/ML, mobile, and system automation." },
       { name: "author", content: "Vivek R" },
@@ -87,13 +91,20 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="grain min-h-screen">
+      <div className="grain min-h-screen relative">
+        <div className="noise" aria-hidden />
+        <Loader />
+        <Aurora />
+        <Spotlight />
+        <ScrollProgress />
         <SmoothScroll />
         <Cursor />
         <SideNav />
         <CommandTrigger />
         <EngagementPrompt />
         <Outlet />
+        {/* mobile bottom nav spacer so last section not hidden behind floating pill */}
+        <div aria-hidden className="h-[86px] md:hidden" style={{ paddingBottom: "env(safe-area-inset-bottom)" }} />
       </div>
     </QueryClientProvider>
   );
