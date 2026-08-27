@@ -537,7 +537,7 @@ function Index() {
               <Magnetic><Link to="/projects" className="px-8 py-5 border border-cream/30 hover:border-cream hover:bg-cream/5 hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none">Browse the catalogue</Link></Magnetic>
             </div>
             <div className="mt-10 flex flex-wrap gap-2 mono text-[10px] tracking-widest uppercase text-cream/40">
-              <span className="border border-cream/15 px-3 py-1 rounded-full">vivek987pm@gmail.com</span>
+              <span className="border border-cream/15 px-3 py-1 rounded-full">vivekravi9496497657@gmail.com</span>
               <span className="border border-cream/15 px-3 py-1 rounded-full">+91 85906 09366</span>
               <span className="hidden md:inline border border-cream/10 px-3 py-1 rounded-full">Thodupuzha · Remote</span>
             </div>
