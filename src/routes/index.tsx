@@ -157,19 +157,33 @@ function Index() {
                 <span className="px-3 py-1.5 rounded-full border border-ink/15">JWT • Migrations</span>
               </div>
             </div>
-            <div className="col-span-6 md:col-span-1 mono text-[10px] tracking-[0.2em] uppercase text-ink/60">
+            <div className="col-span-12 md:col-span-1 mono text-[10px] tracking-[0.2em] uppercase text-ink/60">
               <div className="hidden md:block">Studio</div>
               <div className="text-ink mt-1 hidden md:block">Kerala, IN</div>
-              <div className="hidden md:block mt-4 mono text-[9px] border border-ink/10 px-2 py-1 rounded-full inline-block">12.97°N · 76.64°E</div>
-              <div className="md:hidden mono text-[10px]">Kerala, IN — Remote</div>
+              <div className="hidden md:inline-block mt-4 mono text-[9px] border border-ink/10 px-2 py-1 rounded-full">12.97°N · 76.64°E</div>
+              <div className="md:hidden flex items-center justify-between pt-3 pb-1 border-t border-ink/10">
+                <span className="mono text-[10px] tracking-[0.18em]">Kerala, IN — Remote</span>
+                <span className="mono text-[9px] border border-ink/10 px-2 py-0.5 rounded-full">12.97°N · 76.64°E</span>
+              </div>
             </div>
-            <div className="col-span-6 md:col-span-3 flex md:justify-end items-end gap-2">
-              <Magnetic><Link to="/projects" className="flex-1 md:flex-none text-center px-5 md:px-6 py-4 bg-ink text-cream mono text-xs tracking-[0.2em] uppercase hover-lift active:scale-[0.98] transition-transform shadow-[0_12px_30px_rgba(0,0,0,0.18)] rounded-full md:rounded-none relative overflow-hidden group">
-                <span className="relative">See work →</span><span className="shine" />
-              </Link></Magnetic>
-              <Magnetic><Link to="/contact" className="flex-1 md:flex-none text-center px-5 md:px-6 py-4 border border-ink bg-cream/70 backdrop-blur mono text-xs tracking-[0.2em] uppercase hover-lift active:scale-[0.98] transition-transform rounded-full md:rounded-none">
-                Signal
-              </Link></Magnetic>
+            <div className="col-span-12 md:col-span-3 flex items-center md:justify-end gap-3 mt-1 md:mt-0">
+              <Magnetic className="flex-1 md:flex-none">
+                <Link
+                  to="/projects"
+                  className="w-full flex items-center justify-center px-6 py-3.5 md:py-4 bg-ink text-cream mono text-xs tracking-[0.2em] uppercase whitespace-nowrap hover-lift active:scale-[0.98] transition-transform shadow-[0_12px_30px_rgba(0,0,0,0.18)] rounded-full md:rounded-none relative overflow-hidden group"
+                >
+                  <span className="relative">See work →</span>
+                  <span className="shine" />
+                </Link>
+              </Magnetic>
+              <Magnetic className="flex-1 md:flex-none">
+                <Link
+                  to="/contact"
+                  className="w-full flex items-center justify-center px-6 py-3.5 md:py-4 border border-ink bg-cream/70 backdrop-blur mono text-xs tracking-[0.2em] uppercase whitespace-nowrap hover-lift active:scale-[0.98] transition-transform rounded-full md:rounded-none"
+                >
+                  Signal
+                </Link>
+              </Magnetic>
             </div>
           </motion.div>
         </motion.div>
@@ -533,8 +547,8 @@ function Index() {
             </h2>
             <p className="mono text-xs tracking-[0.18em] uppercase text-cream/50 mt-6 max-w-xl">Backend intern @ ADVICIYA — NestJS + PostgreSQL in prod. Available for freelance & full-time. Reply &lt; 48h.</p>
             <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 md:gap-4 mono text-xs tracking-[0.2em] uppercase">
-              <Magnetic><Link to="/contact" className="px-8 py-5 bg-cream text-ink hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none relative overflow-hidden group block">Start a project → <span className="shine" /></Link></Magnetic>
-              <Magnetic><Link to="/projects" className="px-8 py-5 border border-cream/30 hover:border-cream hover:bg-cream/5 hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none">Browse the catalogue</Link></Magnetic>
+              <Magnetic className="w-full sm:w-auto"><Link to="/contact" className="w-full block px-8 py-5 bg-cream text-ink hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none relative overflow-hidden group">Start a project → <span className="shine" /></Link></Magnetic>
+              <Magnetic className="w-full sm:w-auto"><Link to="/projects" className="w-full block px-8 py-5 border border-cream/30 hover:border-cream hover:bg-cream/5 hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none">Browse the catalogue</Link></Magnetic>
             </div>
             <div className="mt-10 flex flex-wrap gap-2 mono text-[10px] tracking-widest uppercase text-cream/40">
               <span className="border border-cream/15 px-3 py-1 rounded-full">vivek987pm@gmail.com</span>
@@ -548,7 +562,7 @@ function Index() {
   );
 }
 
-function Magnetic({ children }: { children: React.ReactNode }) {
+function Magnetic({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const onMove = (e: React.MouseEvent) => {
     const el = ref.current;
@@ -564,7 +578,7 @@ function Magnetic({ children }: { children: React.ReactNode }) {
     el.style.transform = "translate(0,0)";
   };
   return (
-    <div ref={ref} onMouseMove={onMove} onMouseLeave={onLeave} className="magnetic">
+    <div ref={ref} onMouseMove={onMove} onMouseLeave={onLeave} className={`magnetic ${className}`}>
       {children}
     </div>
   );
