@@ -16,7 +16,7 @@ export function FloatingPaper() {
         <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-paper border-l border-t border-ink/10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }} />
       </motion.div>
       <motion.div style={{ y: y2 }} className="absolute left-[6%] bottom-[18%] w-32 h-20 glass rounded-xl border border-ink/10 p-3 rotate-[1deg] shadow-lg">
-        <div className="mono text-[8px] tracking-widest text-ember">● LIVE — ADVICIYA</div>
+        <div className="mono text-[8px] tracking-widest text-ember">● STACK — NESTJS</div>
         <div className="display text-lg leading-none mt-1">NestJS<span className="text-ember">.</span></div>
         <div className="mono text-[9px] text-ink/50 mt-1">12 tables · JWT · 78% cov</div>
       </motion.div>

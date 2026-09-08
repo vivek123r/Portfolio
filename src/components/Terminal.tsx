@@ -14,9 +14,9 @@ const COMMANDS: Record<string, string> = {
   clear      — clear screen
   sudo       — try it.`,
   about: `Vivek R — AI Engineer & Full-Stack Developer.
-Self-driven IT undergraduate at Viswajyothi College of
-Engineering. 4 years coding. 8 GitHub projects. 3 certifications.
-Builds in AI/Automation, mobile, and cloud. Based in Kerala.`,
+Self-driven builder & engineer. 4 years coding.
+8 GitHub projects. 3 certifications. Builds in AI/Automation,
+mobile, and cloud. Based in Kerala.`,
   skills: `LANGUAGES    Python, JavaScript, TypeScript, Dart, SQL
 FRAMEWORKS   React, Next.js, Node.js, Flutter, FastAPI, Flask
 AI & AUTO    LangChain, LangGraph, n8n, LLMs, Prompt Engineering
@@ -31,7 +31,7 @@ TOOLS        Git, CI/CD, Jest, Postman, REST APIs, WebSockets`,
 07 CHATBOT EXT  — browser extension
 08 SCRAPER BOT  — python web scraping suite
 09 DEVFOLIO     — this portfolio`,
-  experience: `Backend Intern · ADVICIYA (2026)
+  experience: `Backend Intern (Former) · ADVICIYA (2026)
 — Built & maintained APIs with Node.js, NestJS, TypeScript, PostgreSQL & TypeORM
 — JWT auth, DB migrations, request validation (class-validator)
 AWS Intern · Cydez Technologies (2025)

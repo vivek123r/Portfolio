@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const LINES = [
   "VIVEK_R // PORTFOLIO_OS v.2026.05",
-  "BOOTING — ADVICIYA :: NESTJS + POSTGRES",
+  "BOOTING — NESTJS + POSTGRESQL APIS",
   "LOADING — 08 PROJECTS · 20+ STACK · 03 LOGS",
 ];
 
@@ -46,7 +46,7 @@ export function Loader() {
               <motion.div initial={{ width: 0 }} animate={{ width: done ? "100%" : "68%" }} transition={{ duration: done ? 0.6 : 2, ease: [0.22, 1, 0.36, 1] }} className="h-full bg-ember" />
             </div>
             <div className="mt-3 mono text-[10px] tracking-[0.2em] uppercase text-cream/40 flex gap-4">
-              <span>ADVICIYA — backend intern</span><span className="hidden md:inline">·</span><span>NestJS · TypeORM · JWT</span>
+              <span>BACKEND · FULL-STACK</span><span className="hidden md:inline">·</span><span>NestJS · TypeORM · JWT</span>
             </div>
           </div>
 

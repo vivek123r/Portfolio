@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Vivek R — Developer Portfolio · AI · Mobile · Cloud" },
-      { name: "description", content: "Personal portfolio of Vivek R — IT undergrad and self-taught developer shipping projects across AI/ML, mobile, and cloud." },
+      { name: "description", content: "Personal portfolio of Vivek R — Self-taught developer & engineer shipping projects across AI/ML, mobile, and cloud." },
     ],
   }),
 });
@@ -29,7 +29,7 @@ const skills = [
 const rotating = [
   "Currently shipping side projects",
   "Learning by building, daily",
-  "Open to internships & collabs",
+  "Open to full-time & collabs",
   "Writing code that actually runs",
 ];
 
@@ -71,7 +71,7 @@ function Index() {
         <div className="absolute inset-x-0 top-[38%] h-px bg-gradient-to-r from-transparent via-ember/20 to-transparent hidden md:block" />
         {/* floating code glass — desktop */}
         <motion.div variants={rise} initial="hidden" animate="show" className="hidden lg:block absolute right-[6%] top-[18%] glass rounded-2xl p-4 w-[300px] rotate-[-1deg] float shadow-xl">
-          <div className="mono text-[10px] tracking-widest text-ink/40 mb-2 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-ember animate-pulse" /> adviciya — api.service.ts</div>
+          <div className="mono text-[10px] tracking-widest text-ink/40 mb-2 flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-ember animate-pulse" /> api.service.ts</div>
           <div className="mono text-[11px] leading-relaxed text-ink">
             <span className="text-ember">@UseGuards</span>(JwtAuthGuard)<br/>
             <span className="text-ink/60">async</span> create(<span className="text-ember">dto: CreateDto</span>) {"{"}<br/>
@@ -100,7 +100,7 @@ function Index() {
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
                   <span className="text-ink mono text-[10px] tracking-[0.2em] uppercase">Available for work</span>
                 </span>
-                <span className="inline-flex items-center gap-1 text-[9px] border border-ember/20 bg-ember/10 text-ember px-2.5 py-1 rounded-full mono tracking-[0.2em] uppercase">● Backend Intern @ ADVICIYA — NEW</span>
+                <span className="inline-flex items-center gap-1 text-[9px] border border-ember/20 bg-ember/10 text-ember px-2.5 py-1 rounded-full mono tracking-[0.2em] uppercase">● Full-Stack & AI Engineer</span>
               </div>
             </div>
             <div className="col-span-12 md:col-span-10 overflow-visible relative">
@@ -142,7 +142,7 @@ function Index() {
             </div>
             <div className="col-span-12 md:col-span-6">
               <p className="text-[18px] md:text-[22px] leading-[1.25] font-light max-w-[560px]">
-                IT undergrad · Self-taught <em className="font-serif">builder</em>. Now <em className="font-serif text-ember">Backend Developer Intern @ ADVICIYA</em> — shipping NestJS + PostgreSQL APIs in production. I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em>.
+                Self-taught <em className="font-serif">builder</em> & <em className="font-serif text-ember">Full-Stack Engineer</em> — shipping NestJS + PostgreSQL APIs, AI agents, and mobile apps. I make things across <em className="font-serif">AI</em>, <em className="font-serif">mobile</em>, and <em className="font-serif">cloud</em>.
               </p>
               <div className="mt-4 md:mt-6 mono text-sm flex items-center gap-2 h-6 text-ember glass inline-flex px-3 py-1 rounded-full border border-ember/10 min-w-0">
                 <span className="text-ink/50 shrink-0">{">"}</span>
@@ -152,9 +152,9 @@ function Index() {
                 <span className="animate-pulse shrink-0">▌</span>
               </div>
               <div className="mt-4 flex md:hidden flex-wrap gap-2 mono text-[10px] tracking-widest uppercase">
-                <span className="px-3 py-1.5 rounded-full bg-ink text-cream">ADVICIYA — 2026</span>
+                <span className="px-3 py-1.5 rounded-full bg-ink text-cream">BACKEND · AI</span>
                 <span className="px-3 py-1.5 rounded-full border border-ink/15">NestJS • TypeORM</span>
-                <span className="px-3 py-1.5 rounded-full border border-ink/15">JWT • Migrations</span>
+                <span className="px-3 py-1.5 rounded-full border border-ink/15">JWT • PostgreSQL</span>
               </div>
             </div>
             <div className="col-span-12 md:col-span-1 mono text-[10px] tracking-[0.2em] uppercase text-ink/60">
@@ -217,7 +217,7 @@ function Index() {
         </motion.div>
       </section>
 
-      <Marquee items={["Vivek R · Portfolio", "AI · Mobile · Cloud", "Student · Builder · Shipper", "Open to internships & collabs", "Currently building →"]} />
+      <Marquee items={["Vivek R · Portfolio", "AI · Mobile · Cloud", "Builder · Shipper · Engineer", "Open to full-time & collabs", "Currently building →"]} />
 
       {/* ABOUT — mind blow: huge quote + parallax reveal + insane marquee bg */}
       <motion.section
@@ -264,12 +264,12 @@ function Index() {
             <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="mt-10 hidden md:flex items-center gap-6">
               <span className="mono text-[10px] tracking-[0.25em] uppercase text-ink/50">stack in motion</span>
               <span className="h-px flex-1 bg-ink/10 relative overflow-hidden"><motion.span animate={{ x: ["-100%", "100%"] }} transition={{ duration: 2.2, repeat: Infinity, ease: "linear" }} className="absolute inset-y-0 left-0 w-1/3 bg-ember/40" /></span>
-              <span className="mono text-[10px] tracking-widest bg-ink text-cream px-3 py-1 rounded-full">ADVICIYA · NestJS</span>
+              <span className="mono text-[10px] tracking-widest bg-ink text-cream px-3 py-1 rounded-full">NestJS · PostgreSQL</span>
               <span className="mono text-[10px] tracking-widest border border-ink/15 px-3 py-1 rounded-full">AI · Mobile · Cloud</span>
             </motion.div>
             <div className="mt-8 flex flex-wrap gap-2 md:hidden">
               <span className="mono text-[11px] uppercase tracking-widest border border-ink/15 px-3 py-2 rounded-full bg-paper">AI / Automation</span>
-              <span className="mono text-[11px] uppercase tracking-widest border border-ink/15 px-3 py-2 rounded-full bg-ember text-cream">ADVICIYA — Backend</span>
+              <span className="mono text-[11px] uppercase tracking-widest border border-ink/15 px-3 py-2 rounded-full bg-ember text-cream">Backend · NestJS</span>
               <span className="mono text-[11px] uppercase tracking-widest border border-ink/15 px-3 py-2 rounded-full">Cloud — AWS</span>
             </div>
           </div>
@@ -297,7 +297,7 @@ function Index() {
                 <span className="md:hidden ml-auto mono text-[10px] tracking-[0.2em] uppercase text-ink/30">03 entries</span>
               </div>
               <div className="hidden md:block mt-4 mono text-[10px] leading-relaxed tracking-[0.2em] uppercase text-ink/30">timeline<br/>2026 → 2023<br/>scroll to trace</div>
-              <div className="hidden md:flex mt-6 items-center gap-2 mono text-[10px] tracking-widest uppercase text-ember bg-ember/10 border border-ember/15 px-2.5 py-1 rounded-full w-fit">● LIVE — ADVICIYA</div>
+              <div className="hidden md:flex mt-6 items-center gap-2 mono text-[10px] tracking-widest uppercase text-ember bg-ember/10 border border-ember/15 px-2.5 py-1 rounded-full w-fit">● FIELD LOG</div>
             </div>
 
             <div className="col-span-12 md:col-span-10">
@@ -311,11 +311,11 @@ function Index() {
                 <div className="space-y-10">
                   {[
                     {
-                      kicker: "2026 — Now · Backend Developer Intern",
+                      kicker: "2026 · Backend Intern",
                       title: "ADVICIYA",
                       org: "Kerala · Remote — Production APIs",
-                      desc: "Shipping NestJS + PostgreSQL in production. Built JWT auth, TypeORM migrations, class-validator pipelines. 12 tables, 78% coverage, request validation at edge.",
-                      badge: "NEW — CURRENT",
+                      desc: "Shipped NestJS + PostgreSQL in production. Built JWT auth, TypeORM migrations, class-validator pipelines. 12 tables, 78% coverage, request validation at edge.",
+                      badge: "COMPLETED",
                       stack: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT"],
                       metric: "12 tables · 78% cov",
                       tone: "ember",
@@ -330,10 +330,10 @@ function Index() {
                       tone: "ink",
                     },
                     {
-                      kicker: "2023 — Present · B.Tech IT",
+                      kicker: "B.Tech · Information Technology",
                       title: "Viswajyothi C.E.T.",
-                      org: "Muvattupuzha — IT Undergraduate",
-                      desc: "Self-driven. Shipped 08 GitHub projects across AI, mobile, cloud between semesters. Learning by building, daily.",
+                      org: "Muvattupuzha",
+                      desc: "Self-driven engineer. Shipped 08 GitHub projects across AI, mobile, cloud. Learning by building, daily.",
                       stack: ["DSA", "Systems", "AI/ML", "Mobile"],
                       metric: "08 shipped",
                       tone: "paper",
@@ -425,14 +425,14 @@ function Index() {
                   <motion.div style={{ height: fieldLine }} className="absolute left-[7px] top-1 w-px bg-ember shadow-[0_0_8px_rgba(239,68,68,0.6)] md:hidden" />
                   <div className="space-y-4">
                     {[
-                      { kicker: "2026 · Backend Intern", title: "ADVICIYA", org: "Remote — Production", desc: "NestJS + PostgreSQL + TypeORM. JWT, migrations, validation. 12 tables, 78% coverage.", badge: "NEW", stack: ["NestJS", "PostgreSQL", "TypeORM", "JWT"], metric: "12 tables" },
+                      { kicker: "2026 · Backend Intern", title: "ADVICIYA", org: "Remote — Production", desc: "NestJS + PostgreSQL + TypeORM. JWT, migrations, validation. 12 tables, 78% coverage.", badge: "EXPERIENCE", stack: ["NestJS", "PostgreSQL", "TypeORM", "JWT"], metric: "12 tables" },
                       { kicker: "2025 · AWS Intern", title: "Cydez Technologies", org: "Kochi — Cloud Ops", desc: "EC2 + S3, -20% deploy, 99.9% uptime via IAM + CloudWatch.", stack: ["AWS", "Docker", "CloudWatch"], metric: "-20% time" },
-                      { kicker: "B.Tech · IT", title: "Viswajyothi C.E.T.", org: "Muvattupuzha", desc: "Self-driven IT undergrad — 08 projects shipped.", stack: ["DSA", "AI", "Mobile"], metric: "08 shipped" },
+                      { kicker: "B.Tech · IT", title: "Viswajyothi C.E.T.", org: "Muvattupuzha", desc: "Self-driven engineer — 08 projects shipped across AI, mobile & cloud.", stack: ["DSA", "AI", "Mobile"], metric: "08 shipped" },
                     ].map((e, i) => (
                       <motion.div key={e.title} initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="relative">
                         <div className={`absolute -left-[18px] top-6 w-3 h-3 rounded-full border-2 ${i === 0 ? "bg-ember border-paper shadow-[0_0_10px_rgba(239,68,68,0.8)] animate-pulse" : "bg-paper border-ink/30"}`} />
                         <div className={`rounded-2xl border p-5 relative overflow-hidden ${i === 0 ? "bg-ink text-cream border-ink shadow-xl" : "bg-cream border-ink/15"}`}>
-                          {i === 0 && <span className="absolute top-3 right-3 mono text-[9px] tracking-[0.2em] uppercase bg-ember text-cream px-2 py-1 rounded-full">● CURRENT</span>}
+                          {i === 0 && <span className="absolute top-3 right-3 mono text-[9px] tracking-[0.2em] uppercase bg-ember text-cream px-2 py-1 rounded-full">● 2026</span>}
                           <div className={`mono text-[10px] tracking-widest uppercase ${i === 0 ? "text-ember" : "text-ember"}`}>{e.kicker}</div>
                           <h3 className={`display text-2xl mt-1 leading-none ${i === 0 ? "text-cream" : "text-ink"}`}>{e.title}</h3>
                           <div className={`mono text-[10px] tracking-[0.2em] uppercase ${i === 0 ? "text-cream/50" : "text-ink/45"}`}>{e.org} · {e.metric}</div>
@@ -507,7 +507,7 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              {cat.name === "Backend" && <div className="mt-4 mono text-[10px] tracking-widest uppercase text-ember bg-ember/10 border border-ember/15 px-2.5 py-1 rounded-full inline-flex items-center gap-1">● ADVICIYA — active</div>}
+              {cat.name === "Backend" && <div className="mt-4 mono text-[10px] tracking-widest uppercase text-ember bg-ember/10 border border-ember/15 px-2.5 py-1 rounded-full inline-flex items-center gap-1">● Production Stack</div>}
             </motion.div>
           ))}
         </div>
@@ -528,7 +528,7 @@ function Index() {
             className="display text-[22vw] leading-none text-cream/[0.04] whitespace-nowrap"
             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.08)" }}
           >
-            VIVEK_R — ADVICIYA — NESTJS — VIVEK_R — ADVICIYA —
+            VIVEK_R — NESTJS — POSTGRES — VIVEK_R — AI & CLOUD —
           </motion.div>
         </div>
         <div className="absolute right-[8%] top-[18%] w-64 h-64 bg-ember/10 morph blur-[0.5px] pointer-events-none hidden lg:block" />
@@ -545,7 +545,7 @@ function Index() {
                 <motion.span initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }} className="block h-[2px] bg-ember origin-left mt-2 w-[280px] md:w-[520px]" />
               </Link>
             </h2>
-            <p className="mono text-xs tracking-[0.18em] uppercase text-cream/50 mt-6 max-w-xl">Backend intern @ ADVICIYA — NestJS + PostgreSQL in prod. Available for freelance & full-time. Reply &lt; 48h.</p>
+            <p className="mono text-xs tracking-[0.18em] uppercase text-cream/50 mt-6 max-w-xl">Full-stack & AI engineer — NestJS + PostgreSQL in prod. Available for freelance & full-time. Reply &lt; 48h.</p>
             <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 md:gap-4 mono text-xs tracking-[0.2em] uppercase">
               <Magnetic className="w-full sm:w-auto"><Link to="/contact" className="w-full block px-8 py-5 bg-cream text-ink hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none relative overflow-hidden group">Start a project → <span className="shine" /></Link></Magnetic>
               <Magnetic className="w-full sm:w-auto"><Link to="/projects" className="w-full block px-8 py-5 border border-cream/30 hover:border-cream hover:bg-cream/5 hover-lift active:scale-[0.98] transition-transform text-center rounded-full md:rounded-none">Browse the catalogue</Link></Magnetic>
