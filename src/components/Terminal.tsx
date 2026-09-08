@@ -31,13 +31,13 @@ TOOLS        Git, CI/CD, Jest, Postman, REST APIs, WebSockets`,
 07 CHATBOT EXT  — browser extension
 08 SCRAPER BOT  — python web scraping suite
 09 DEVFOLIO     — this portfolio`,
-  experience: `Backend Intern (Former) · ADVICIYA (2026)
+  experience: `Backend Intern (Former) · ADVICIYA, Kochi (2026)
 — Built & maintained APIs with Node.js, NestJS, TypeScript, PostgreSQL & TypeORM
 — JWT auth, DB migrations, request validation (class-validator)
-AWS Intern · Cydez Technologies (2025)
+AWS Intern · Cydez Technologies, Kochi (2025)
 — Managed scalable apps on EC2/S3, -20% deploy time
 — Configured IAM + CloudWatch, 99.9% uptime
-B.Tech IT · Viswajyothi College of Engineering Technology`,
+B.Tech IT (Completed) · Viswajyothi College of Engineering Technology`,
   contact: `email     vivek987pm@gmail.com
 phone     +91 85906 09366
 github    https://github.com/vivek123r

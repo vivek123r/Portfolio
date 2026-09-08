@@ -313,9 +313,8 @@ function Index() {
                     {
                       kicker: "2026 · Backend Intern",
                       title: "ADVICIYA",
-                      org: "Kerala · Remote — Production APIs",
+                      org: "Kochi — Production APIs",
                       desc: "Shipped NestJS + PostgreSQL in production. Built JWT auth, TypeORM migrations, class-validator pipelines. 12 tables, 78% coverage, request validation at edge.",
-                      badge: "COMPLETED",
                       stack: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "TypeORM", "JWT"],
                       metric: "12 tables · 78% cov",
                       tone: "ember",
@@ -334,6 +333,7 @@ function Index() {
                       title: "Viswajyothi C.E.T.",
                       org: "Muvattupuzha",
                       desc: "Self-driven engineer. Shipped 08 GitHub projects across AI, mobile, cloud. Learning by building, daily.",
+                      badge: "COMPLETED",
                       stack: ["DSA", "Systems", "AI/ML", "Mobile"],
                       metric: "08 shipped",
                       tone: "paper",
@@ -425,14 +425,14 @@ function Index() {
                   <motion.div style={{ height: fieldLine }} className="absolute left-[7px] top-1 w-px bg-ember shadow-[0_0_8px_rgba(239,68,68,0.6)] md:hidden" />
                   <div className="space-y-4">
                     {[
-                      { kicker: "2026 · Backend Intern", title: "ADVICIYA", org: "Remote — Production", desc: "NestJS + PostgreSQL + TypeORM. JWT, migrations, validation. 12 tables, 78% coverage.", badge: "EXPERIENCE", stack: ["NestJS", "PostgreSQL", "TypeORM", "JWT"], metric: "12 tables" },
+                      { kicker: "2026 · Backend Intern", title: "ADVICIYA", org: "Kochi — Production", desc: "NestJS + PostgreSQL + TypeORM. JWT, migrations, validation. 12 tables, 78% coverage.", stack: ["NestJS", "PostgreSQL", "TypeORM", "JWT"], metric: "12 tables" },
                       { kicker: "2025 · AWS Intern", title: "Cydez Technologies", org: "Kochi — Cloud Ops", desc: "EC2 + S3, -20% deploy, 99.9% uptime via IAM + CloudWatch.", stack: ["AWS", "Docker", "CloudWatch"], metric: "-20% time" },
-                      { kicker: "B.Tech · IT", title: "Viswajyothi C.E.T.", org: "Muvattupuzha", desc: "Self-driven engineer — 08 projects shipped across AI, mobile & cloud.", stack: ["DSA", "AI", "Mobile"], metric: "08 shipped" },
+                      { kicker: "B.Tech · IT", title: "Viswajyothi C.E.T.", org: "Muvattupuzha", desc: "Self-driven engineer — 08 projects shipped across AI, mobile & cloud.", badge: "COMPLETED", stack: ["DSA", "AI", "Mobile"], metric: "08 shipped" },
                     ].map((e, i) => (
                       <motion.div key={e.title} initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="relative">
-                        <div className={`absolute -left-[18px] top-6 w-3 h-3 rounded-full border-2 ${i === 0 ? "bg-ember border-paper shadow-[0_0_10px_rgba(239,68,68,0.8)] animate-pulse" : "bg-paper border-ink/30"}`} />
+                        <div className={`absolute -left-[18px] top-6 w-3 h-3 rounded-full border-2 ${e.badge ? "bg-ember border-paper shadow-[0_0_10px_rgba(239,68,68,0.8)] animate-pulse" : "bg-paper border-ink/30"}`} />
                         <div className={`rounded-2xl border p-5 relative overflow-hidden ${i === 0 ? "bg-ink text-cream border-ink shadow-xl" : "bg-cream border-ink/15"}`}>
-                          {i === 0 && <span className="absolute top-3 right-3 mono text-[9px] tracking-[0.2em] uppercase bg-ember text-cream px-2 py-1 rounded-full">● 2026</span>}
+                          {e.badge && <span className="absolute top-3 right-3 mono text-[9px] tracking-[0.2em] uppercase bg-ember/15 text-ember border border-ember/25 px-2 py-1 rounded-full animate-pulse">● {e.badge}</span>}
                           <div className={`mono text-[10px] tracking-widest uppercase ${i === 0 ? "text-ember" : "text-ember"}`}>{e.kicker}</div>
                           <h3 className={`display text-2xl mt-1 leading-none ${i === 0 ? "text-cream" : "text-ink"}`}>{e.title}</h3>
                           <div className={`mono text-[10px] tracking-[0.2em] uppercase ${i === 0 ? "text-cream/50" : "text-ink/45"}`}>{e.org} · {e.metric}</div>
